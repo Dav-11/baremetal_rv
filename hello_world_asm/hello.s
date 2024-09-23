@@ -12,17 +12,14 @@ puts:
     # a1 - UART base address
 1:                      # while string byte is not null
     lb t0, 0(a0)        # get byte at current string pos
-    beq zero, t0, 2f    # if t0 == 0 then j 2f
+    beq zero, t0, 2f    # if t0 == 0 then j 2 (f = forward as in forward branches)
     sb t0, 0(a1)        # write byte to UART
     addi a0, a0, 1      # a0++ (next char)
-    j 1b                # jump to 1b
+    j 1b                # jump to 1 (b = backward as in backward branches)
 
 2:                      # str byte is null
     ret    
     
-
-
-
 .section .data
 hello_world: .string "Hello World!"
     

@@ -6,8 +6,12 @@
 
 ### MacOS
 ```shell
+# qemu
 brew install qemu
-brew install riscv64-elf-gcc
+
+# gcc toolchain
+brew tap riscv-software-src/riscv
+brew install riscv-tools
 ```
 
 ## Get Info from qemu
