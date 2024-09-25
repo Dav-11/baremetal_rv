@@ -6,4 +6,6 @@
 .fleet
 .zed
 
+# object files / bins
 *.o
+*.elf
