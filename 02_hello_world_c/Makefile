@@ -6,7 +6,7 @@ all: hello.elf
 #           GiB address range. Programs can be statically or dynamically
 #           linked.
 #
-# If not used -> /hello_world_c/hello.c:5:(.text+0x20): relocation truncated to fit: R_RISCV_HI20 against `.LC0'
+# If not used -> /02_hello_world_c/hello.c:5:(.text+0x20): relocation truncated to fit: R_RISCV_HI20 against `.LC0'
 
 hello.o: hello.c qemu_riscv_uart.c qemu_riscv_uart.h
 	riscv64-unknown-elf-gcc -c -g -O0 -ffreestanding -mcmodel=medany -march=rv64g -mabi=lp64 -o "$@" hello.c
